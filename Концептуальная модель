@@ -1,0 +1,26 @@
+@startuml
+
+class Robot {
+ positionX: Integer
+ positionY: Integer
+}
+
+
+class Camera {
+ 360 overview: Integer
+}
+
+class wall {
+}
+
+class pollution {
+ positionX: Integer
+ positionY: Integer
+}
+
+Camera - Robot : send a signal
+Robot - wall : get to
+Robot - pollution : clean up
+Camera - wall : track
+Camera - pollution: recognizes coordinates
+@enduml
